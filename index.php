@@ -26,7 +26,7 @@
     <nav>
         <div id="navbar" class="logo">
             <img src="IMG/logo.png" alt="logo">
-            <div class="logotex">Ln.NGO </div>
+            <div class="logotex">Paw Foundation </div>
         </div>
 
         <ul>
@@ -188,8 +188,6 @@
     </div>
 </section>
 
-    
-
 
 
 
@@ -216,7 +214,7 @@
                             <i class="fas fa-map-marker-alt"></i>
                             <div class="info">
                                 <div class="head">Address</div>
-                                <div class="sub-title"> Gujrat , India</div>
+                                <div class="sub-title"> Delhi , India</div>
                             </div>
                         </div>
                     </div>
@@ -225,14 +223,14 @@
                             <i class="fas fa-envelope"></i>
                             <div class="info">
                                 <div class="head">Email</div>
-                                <div class="sub-title">ln.ngo@gmail.com.in</div>
+                                <div class="sub-title">deshjain@gmail.com</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="column">
-                <div class="title2">Message Ln.NGO</div>
+                <div class="title2">Message Paw Foundation</div>
                 <form action="#">
                     <div class="field">
                             <input type="text" placeholder="Name" required>
@@ -259,7 +257,7 @@
 
     <!-- footer section start -->
     <footer>
-        <span class="far fa-copyright"></span> <span style="color: #111;">Ln.NGO
+        <span class="far fa-copyright"></span> <span style="color: #111;">Paw Foundation
         </span>&nbsp;|&nbsp;&nbsp;<span>2021 All rights reserved.</span>
     </footer>
 

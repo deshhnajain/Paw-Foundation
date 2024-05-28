@@ -15,7 +15,6 @@ function carousel() {
   setTimeout(carousel, 1000);
 }
 
-
 // Automatic Slideshow for about >> mission and vision ..
 
 var cardss = 0;
@@ -40,3 +39,18 @@ function showSlides() {
 
   setTimeout(showSlides, 1000); // Change image every 2 seconds
 }
+
+// New code for the sidebar with signup form
+document.addEventListener('DOMContentLoaded', function() {
+  var sidebar = document.getElementById('sidebar');
+  var sidebarButton = document.getElementById('sidebarButton');
+  var closeButton = document.getElementById('closeButton');
+
+  sidebarButton.addEventListener('click', function() {
+    sidebar.style.width = '300px'; // Adjust the width as needed
+  });
+
+  closeButton.addEventListener('click', function() {
+    sidebar.style.width = '0';
+  });
+});

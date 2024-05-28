@@ -47,7 +47,7 @@ section {
 
 
 /* ------------------------------------------ navbar ---------------------------------------------  */
-nav{
+nav {
     position: sticky;
     top: 0px;
     display: flex;
@@ -56,23 +56,23 @@ nav{
     background: #50C878;
     align-items: center;
     justify-content: space-between;
-    padding: 0 50px 0 100px;
-    flex-wrap: wrap;
+    padding: 0 50px;
     z-index: 2;
+}
   }
-  nav .logo{
-    color: #fff;
+  nav .logo
+    {
     display: flex;
-    height:50px;
-  }
+    align-items: center;
+}
+  
   
   nav .logo img{
-    height:50px;
-    border-radius: 50PX;
+   height: 50px;
+    border-radius: 50px;
   }
   nav .logo .logotex{
     color: #fff;
-    margin: 10px 0px;
     margin-left: 15px;
     font-size: 24px;
     font-weight: 600;
@@ -102,6 +102,70 @@ nav{
   nav ul li a:hover{
     color: #111; 
   }
+
+  nav .nav-left {
+    display: flex;
+    align-items: center;
+}
+
+nav .signup-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+
+nav .signup-link:hover {
+    color: #111;
+}
+
+
+/* ------------------------------------------sidebar ---------------------------------------------  */
+.sidebar {
+    height: 80%; /* Decreased height */
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    opacity: 0.9;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;}
+
+.sidebar .signup-form {
+    padding: 8px 8px 8px 32px;
+}
+
+.sidebar .signup-form .field {
+    margin: 15px 0;
+}
+
+.sidebar .signup-form .button-area {
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ------------------------------------------ slider ---------------------------------------------  */

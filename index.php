@@ -1,43 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paw Foundation </title>
+    <title>Paw Foundation</title>
     <!-- link for tab logo -->
     <link rel="icon" href="IMG/logo.png" type="image/x-icon">
-
     <!-- link css file  -->
     <link rel="stylesheet" href="css/style.css">
-
     <!-- link for icon  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-
 </head>
 
 <body>
 
-
-
-    <!-- /*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/    navbar     /*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/     -->
-
+     <!-- Sidebar for Signup Form -->
+    <div id="sidebar" class="sidebar">
+        <span href="javascript:void(0)" class="closebtn" id="closeButton">&times;</span>
+        <form action="#" class="signup-form">
+            <h2>Signup Form</h2>
+            <div class="field">
+                <input type="text" placeholder="Name" required>
+            </div>
+            <div class="field">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="field">
+                <input type="password" placeholder="Password" required>
+            </div>
+            <div class="button-area">
+                <button type="submit">Signup</button>
+            </div>
+        </form>
+    </div>
+    <!-- Navigation Bar -->
     <nav>
         <div id="navbar" class="logo">
+            <button id="sidebarButton" class="openbtn">Signup</button>
             <img src="IMG/logo.png" alt="logo">
-            <div class="logotex">Paw Foundation </div>
+            <div class="logotex">Paw Foundation</div>
         </div>
-
         <ul>
-            <li><a href="#" >Home</a></li>
-            <li><a href="#about-us" >About Us</a></li>
-            <li><a href="#m-v" >Mission & Vission</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#m-v">Mission & Vision</a></li>
             <li><a href="#donet">Donate</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-
 
  <!-- /*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/   slider   /*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/     -->
 

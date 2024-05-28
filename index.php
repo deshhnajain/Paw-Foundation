@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ln.NGO </title>
+    <title>Paw Foundation </title>
     <!-- link for tab logo -->
-    <link rel="icon" href="IMG/LOGO.jpeg" type="image/x-icon">
+    <link rel="icon" href="IMG/logo.png" type="image/x-icon">
 
     <!-- link css file  -->
     <link rel="stylesheet" href="css/style.css">
@@ -25,7 +25,7 @@
 
     <nav>
         <div id="navbar" class="logo">
-            <img src="IMG/LOGO.jpeg" alt="logo">
+            <img src="IMG/logo.png" alt="logo">
             <div class="logotex">Ln.NGO </div>
         </div>
 
@@ -43,9 +43,9 @@
 
  <div id="slider" class="slider">
     <div>
-        <img class="images" src="IMG/m-slider-1.jpg">
-        <img class="images" src="IMG/m-slider-2.jpg">
-        <img class="images" src="IMG/m-slider-3.jpg">
+        <img class="images" src="IMG/sl1.jpg">
+        <img class="images" src="IMG/sl2.jpg">
+        <img class="images" src="IMG/sl3.jpeg">
 
     </div>
 </div>
@@ -57,10 +57,10 @@
         <h2 class="title">About us</h2>
         <div class="contact-content">
             <div class="column left">
-                <div class="title2">About Ln.NGO</div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius faucibus ligula non congue. Suspendisse at pretium massa, sit amet vulputate nibh. Nam posuere eros dolor. Donec vel arcu sagittis, pretium nisl. </p><br>
+                <div class="title2">About Paw Foundation</div>
+            <p>Paw Foundation is a dedicated non-profit organization committed to the welfare and protection of dogs. Established with a mission to create a safer and more compassionate world for our furry friends, we focus on rescuing, rehabilitating, and rehoming dogs in need. Our team of passionate volunteers works tirelessly to provide medical care, nutritious food, and a loving environment for abandoned, abused, and neglected dogs.  </p><br>
                     
-            <p>Integer vulputate vehicula dolor a eleifend. Duis aliquam Aenean porttitor nibh metus, sollicitudin egestas metus posuere et . Fusce egestas volutpat metus, in sodales sem bibendum porta. Nunc hendrerit nunc sit amet tellus posuere, at malesuada sem gravida. Integer maximus ultricies augue, at dapibus elit bibendum consequat. Cras faucibus tellus eleifend, fermentum purus in, dapibus sapien. Praesent nec ornare risus. Etiam iaculis, ligula vel gravida vestibulum, urna justo posuere ante, id pretium massa arcu sed mi. Nunc a sollicitudin sem. Duis tempus</p>
+            <p>At Paw Foundation, we believe every dog deserves a chance at a happy, healthy life. Our adoption services carefully match dogs with loving families, ensuring a perfect fit for both the pet and the owner. We also run awareness campaigns and community outreach programs to promote animal rights and welfare.</p>
              
             <div class="button-area">
                 <button type="submit">Read more</button>
@@ -68,7 +68,7 @@
             </div>
             <div class="column right">
                 <div class="about-us-logo">
-                    <img src="img/LOGO.jpeg" alt="">
+                    <img src="" alt="">
                 </div>
                 
             </div>
@@ -78,16 +78,16 @@
             
             <div class="column right">
                 <div class="about-us-logo img-2">
-                    <img src="img/about us.jpg" alt="">
+                    <img src="img/aboutus.png" alt="">
                 </div>
                 
             </div>
 
             <div class="column left">
-                <div class="title2">Why Ln.NGO ?</div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius faucibus ligula non congue. Suspendisse at pretium massa, sit amet vulputate nibh. Nam posuere eros dolor. Donec vel arcu sagittis, pretium nisl. </p><br>
+                <div class="title2">Why Paw Foundation ?</div>
+            <p>Choosing Paw Foundation means supporting a dedicated organization that places the well-being and future of dogs at the forefront of its mission. Unlike other organizations, Paw Foundation not only rescues and rehabilitates dogs but also ensures that each one receives individualized care and attention. Our team of experienced and compassionate volunteers works around the clock to provide medical treatment, emotional support, and a nurturing environment for every dog we save.  </p><br>
                     
-            <p>Integer vulputate vehicula dolor a eleifend. Duis aliquam Aenean porttitor nibh metus, sollicitudin egestas metus posuere et . Fusce egestas volutpat metus, in sodales sem bibendum porta. Nunc hendrerit nunc sit amet tellus posuere, at malesuada sem gravida. Integer maximus ultricies augue, at dapibus elit bibendum consequat. Cras faucibus tellus eleifend, fermentum purus in, dapibus sapien. Praesent nec ornare risus. Etiam iaculis, ligula vel gravida vestibulum, urna justo posuere ante, id pretium massa arcu sed mi. Nunc a sollicitudin sem. Duis tempus</p>
+            <p>By choosing Paw Foundation, you are joining a community that is passionate about making a tangible difference in the lives of dogs. We believe in transparency and accountability, regularly updating our supporters on the progress and impact of our initiatives.</p>
              
             <div class="button-area">
                 <button type="submit">Read more</button>
@@ -105,15 +105,15 @@
     <div class="column left">
         <div class="title2" style="text-align: center; color: #111;">Our Mission</div>
         <div class="v-m-img">
-            <img class="card" src="img/image_01.jpg" alt="">
-            <img class="card" src="img/image_02.jpg" alt="">
-            <img class="card" src="img/image_03.jpg" alt="">
-            <img class="card" src="img/image_04.jpg" alt="">
-            <img class="card" src="img/image_05.jpg" alt="">
+            <img class="card" src="img/m1.png" alt="">
+            <img class="card" src="img/m2.jpg" alt="">
+            <img class="card" src="img/m3.jpg" alt="">
+            <img class="card" src="img/m4.jpeg" alt="">
+            <img class="card" src="img/m5.jpeg" alt="">
             
     
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab repellendus odio, ipsa praesentium voluptates, fuga inventore earum deleniti pariatur vel modi libero commodi nam necessitatibus.</p>
+        <p>Our mission is to rescue, rehabilitate, and rehome dogs in need while promoting responsible pet ownership and animal welfare. We aim to create a compassionate world where every dog is valued, protected, and given a chance at a happy, healthy life.</p>
         <div class="button-area">
             <button type="submit">Read more</button>
         </div>
@@ -122,14 +122,14 @@
     <div class="column left">
         <div class="title2" style="text-align: center; color: #111;">Our Vision</div>
         <div class="v-m-img">
-            <img class="card-2" src="img/image_04.jpg" alt="">
-            <img class="card-2" src="img/image_05.jpg" alt="">
-            <img class="card-2" src="img/image_06.jpg" alt="">
-            <img class="card-2" src="img/image_07.jpg" alt="">
-            <img class="card-2" src="img/image_08.jpg" alt="">
+            <img class="card-2" src="img/v1.jpeg" alt="">
+            <img class="card-2" src="img/v2.jpeg" alt="">
+            <img class="card-2" src="img/v3.jpeg" alt="">
+            <img class="card-2" src="img/v4.jpg" alt="">
+            <img class="card-2" src="img/v5.jpg" alt="">
 
         </div>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, aspernatur explicabo. Saepe perferendis et porro quam autem iusto aperiam? Saepe tempora dolor debitis autem a!</p>
+        <p>Our vision is a world where every dog is loved, protected, and cared for in a forever home. We strive to end dog neglect and abandonment through education and advocacy.</p>
       <div class="button-area">
         <button type="submit">Read more</button>
     </div>
@@ -146,60 +146,48 @@
 
 <!-- /*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/   donet section   /*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/     -->
 
-    <!-- donet section start -->
-    <section class="donet" id="donet">
-        <div class="max-width">
-            <h2 class="title"> Donate Us</h2> 
-            <div class="column">
-                <form action="#">
-                    <div class="fields">
-                        <div class="field">
-                            <input type="text" placeholder="frist name" required>
-                        </div>
-                        <div class="field">
-                            <input type="text" placeholder="last number" required>
-                        </div>
-                    </div>
-                    
-                    <div class="field" style="width: 50%;">
-                        <input type="email" placeholder="Email" required>
-                    </div>
-                    <div class="field" style="width: 50%;">
-                        <input type="number" placeholder="Phone number" required>
-                    </div>
-                    <div class="field" style="width: 30%;">
-                        <input type="number" placeholder="Enter Amount" required>
-                    </div>
-                    <div class="fields">
-                        <div class="field">
-                            <input type="text" placeholder="Bank name" required>
-                        </div>
-                        <div class="field">
-                            <input type="number" placeholder="ISFC number" required>
-                        </div>
-                    </div>
-                    <div class="fields">
-                        <div class="field name">
-                            <input type="text" placeholder="country" required>
-                        </div>
-                        <div class="field name">
-                            <input type="text" placeholder="state" required>
-                        </div>
-                        <div class="field">
-                            <input type="text" placeholder="district" required>
-                        </div>
-                    </div>
-                   
-                    <div class="field textarea">
-                        <textarea cols="30" rows="10" placeholder="why you donet ?" required></textarea>
-                    </div>
-                    <div class="button-area">
-                        <button type="submit">Donate NGO</button>
-                    </div>
-                </form>
-            </div>
+    <!-- Donate section start -->
+<section class="donet" id="donet">
+    <div class="max-width">
+        <div class="title-container">
+            <h2 class="title">Donate Us</h2>
         </div>
-    </section>
+        <div class="form-container">
+            <form action="#">
+                <div class="fields">
+                    <div class="field">
+                        <input type="text" placeholder="First Name" required>
+                    </div>
+                </div>
+                
+                <div class="field">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="field">
+                    <input type="number" placeholder="Phone Number" required>
+                </div>
+                <div class="field">
+                    <input type="number" placeholder="Enter Amount" required>
+                </div>
+                <div class="fields">
+                    <div class="field">
+                        <input type="text" placeholder="Bank Name" required>
+                    </div>
+                    <div class="field">
+                        <input type="number" placeholder="ISFC Number" required>
+                    </div>
+                </div>
+                <div class="field textarea">
+                    <textarea cols="30" rows="10" placeholder="Why you donate?" required></textarea>
+                </div>
+                <div class="button-area">
+                    <button type="submit">Donate NGO</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
     
 
 

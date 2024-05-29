@@ -122,31 +122,73 @@ nav .signup-link:hover {
 
 /* Sidebar */
 .sidebar {
-    height: 80%;
+    height: 90%;
     width: 0;
     position: fixed;
     z-index: 1;
-    top: 0;
+    top: 5%;
     left: 0;
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
-    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Close button has been removed from the sidebar */
+.sidebar .form-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .sidebar .signup-form {
-    padding: 8px 8px 8px 32px;
+    width: 80%; /* Adjust width as needed */
+    max-width: 400px; /* Maximum width for the form */
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center; /* Center text inside the form */
+    color: white;
+}
+
+.sidebar .signup-form h2 {
+    margin-bottom: 20px;
 }
 
 .sidebar .signup-form .field {
     margin: 15px 0;
 }
 
+.sidebar .signup-form .field input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
 .sidebar .signup-form .button-area {
     margin-top: 20px;
+}
+
+.sidebar .signup-form .button-area input[type="submit"],
+.sidebar .signup-form .button-area button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #50C878;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.sidebar .signup-form .button-area input[type="submit"]:hover,
+.sidebar .signup-form .button-area button:hover {
+    background-color: #45a467;
 }
 
 /* Slider */

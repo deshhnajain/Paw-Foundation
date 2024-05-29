@@ -17,22 +17,44 @@
 
     <!-- Sidebar for Signup Form -->
     <div id="sidebar" class="sidebar">
-        <form action="#" class="signup-form">
-            <h2>Signup Form</h2>
-            <div class="field">
-                <input type="text" placeholder="Name" required>
-            </div>
-            <div class="field">
-                <input type="email" placeholder="Email" required>
-            </div>
-            <div class="field">
-                <input type="password" placeholder="Password" required>
-            </div>
-            <div class="button-area">
-                <button type="submit">Signup</button>
-            </div>
-        </form>
+        <div class="form-container">
+            <form id="login-form" class="signup-form">
+                <h2>Login to Paw Foundation</h2>
+                <div class="field">
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="field">
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="button-area">
+                    <input type="submit" value="Login">
+                </div>
+                <div class="button-area">
+                    <button type="button" id="showSignupForm">Signup</button>
+                </div>
+            </form>
+
+            <form id="signup-form" class="signup-form" style="display: none;">
+                <h2>Signup to Paw Foundation</h2>
+                <div class="field">
+                    <input type="text" name="name" placeholder="Name" required>
+                </div>
+                <div class="field">
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="field">
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="button-area">
+                    <input type="submit" value="Signup">
+                </div>
+                <div class="button-area">
+                    <button type="button" id="showLoginForm">Login</button>
+                </div>
+            </form>
+        </div>
     </div>
+
     <!-- Navigation Bar -->
     <nav>
         <div id="navbar" class="logo">

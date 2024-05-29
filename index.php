@@ -37,13 +37,32 @@
             <form id="signup-form" class="signup-form" style="display: none;">
                 <h2>Signup to Paw Foundation</h2>
                 <div class="field">
-                    <input type="text" name="name" placeholder="Name" required>
+                    <label for="first_name">First Name:</label>
+                    <input type="text" id="first_name" name="first_name" required>
                 </div>
                 <div class="field">
-                    <input type="email" name="email" placeholder="Email" required>
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" id="last_name" name="last_name" required>
                 </div>
                 <div class="field">
-                    <input type="password" name="password" placeholder="Password" required>
+                    <label for="gender">Gender:</label>
+                    <select name="gender" id="gender" required>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="contact_number">Contact Number:</label>
+                    <input type="tel" id="contact_number" name="contact_number" pattern="[0-9]{10}" required>
+                </div>
+                <div class="field">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="field">
+                    <label for="email_signup">Email:</label>
+                    <input type="email" id="email_signup" name="email" required>
                 </div>
                 <div class="button-area">
                     <input type="submit" value="Signup">
@@ -87,7 +106,7 @@
             <div class="contact-content">
                 <div class="column left">
                     <div class="title2">About Paw Foundation</div>
-                    <p>Paw Foundation is a dedicated non-profit organization committed to the welfare and protection of dogs...</p>
+                    <p>Paw Foundation is a dedicated non-profit organization committed to the welfare and protection of dogs. Established with a mission to create a safer and more compassionate world for our furry friends, we focus on rescuing, rehabilitating, and rehoming dogs in need.<br><br> At Paw Foundation, we believe every dog deserves a chance at a happy, healthy life. Our adoption services carefully match dogs with loving families, ensuring a perfect fit for both the pet and the owner. </p>
                     <div class="button-area">
                         <button type="submit">Read more</button>
                     </div>
@@ -107,7 +126,7 @@
                 </div>
                 <div class="column left">
                     <div class="title2">Why Paw Foundation ?</div>
-                    <p>Choosing Paw Foundation means supporting a dedicated organization...</p>
+                    <p>Choosing Paw Foundation means supporting a dedicated organization We go beyond the basics of rescue by focusing on long-term solutions, such as community education and advocacy for responsible pet ownership, which address the root causes of dog abandonment and mistreatment.<br><br>By choosing Paw Foundation, you are joining a community that is passionate about making a tangible difference in the lives of dogs. We believe in transparency and accountability, regularly updating our supporters on the progress and impact of our initiatives.</p>
                     <div class="button-area">
                         <button type="submit">Read more</button>
                         <button type="submit"><a href="#donet" style="text-decoration: none; color:black">Donate</a></button>

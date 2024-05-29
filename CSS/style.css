@@ -50,7 +50,7 @@ nav {
     display: flex;
     height: 80px;
     width: 100%;
-    background: #50C878;
+    background: #49dcb1;
     align-items: center;
     justify-content: space-between;
     padding: 0 50px;
@@ -117,7 +117,7 @@ nav .signup-link {
 }
 
 nav .signup-link:hover {
-    color: #111;
+    color: #a1fcdf;
 }
 
 /* Sidebar */
@@ -144,29 +144,39 @@ nav .signup-link:hover {
 }
 
 .sidebar .signup-form {
-    width: 80%; /* Adjust width as needed */
-    max-width: 400px; /* Maximum width for the form */
+    width: 80%;
+    max-width: 400px;
     background-color: #222;
     padding: 20px;
+    padding-top: 60px; /* Added padding to move the form down */
     border-radius: 8px;
-    text-align: center; /* Center text inside the form */
     color: white;
+    text-align: left;
 }
 
 .sidebar .signup-form h2 {
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .sidebar .signup-form .field {
     margin: 15px 0;
 }
 
-.sidebar .signup-form .field input {
+.sidebar .signup-form .field input,
+.sidebar .signup-form .field select {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
     border: none;
     border-radius: 5px;
+    color: #111;
+}
+
+.sidebar .signup-form .field label {
+    margin-bottom: 5px;
+    display: block;
+    color: #fff;
 }
 
 .sidebar .signup-form .button-area {
@@ -179,7 +189,7 @@ nav .signup-link:hover {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #50C878;
+    background-color: #49dcb1;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -232,13 +242,13 @@ nav .signup-link:hover {
     border-radius: 6px;
     cursor: pointer;
     flex-wrap: nowrap;
-    background: #15bb4d;
-    border: 2px solid #50C878;
+    background: #49dcb1;
+    border: 2px solid #49dcb1;
     transition: all 0.3s ease;
 }
 
 .about-us .contact-content .left .button-area button:hover {
-    color: #50C878;
+    color: #49dcb1;
     background: none;
 }
 
@@ -250,7 +260,7 @@ nav .signup-link:hover {
 
 .about-us .about-us-logo img {
     height: 490px;
-    border: 10px solid #50C878;
+    border: 10px solid #49dcb1;
     border-radius: 1000PX;
     margin: auto;
 }
@@ -266,7 +276,7 @@ nav .signup-link:hover {
 .about-us .contact-content2 .column {
     width: calc(50% - 30px);
     border: 2px solid black;
-    background-color: #50C878;
+    background-color: #49dcb1;
     border-radius: 10px;
 }
 
@@ -289,7 +299,7 @@ nav .signup-link:hover {
 }
 
 .about-us .contact-content2 .left .button-area button {
-    color: #15bb4d;
+    color: #49dcb1;
     display: block;
     width: 160px !important;
     height: 45px;
@@ -323,7 +333,7 @@ nav .signup-link:hover {
 }
 
 .title-container {
-    background: rgba(80, 200, 120, 0.8);
+    background: #49dcb1;
     width: 100%;
     padding: 20px 0;
     border-radius: 10px;
@@ -375,7 +385,7 @@ nav .signup-link:hover {
     height: 100%;
     width: 100%;
     background-color: rgba(241, 241, 241, 0.8);
-    border: 3px solid #50C878;
+    border: 3px solid #49dcb1;
     border-radius: 6px;
     padding: 0 15px;
     font-size: 17px;
@@ -385,7 +395,7 @@ nav .signup-link:hover {
 
 .donet form .field input:focus,
 .donet form .textarea textarea:focus {
-    border: 4px solid #50C878;
+    border: 4px solid #49dcb1;
 }
 
 .donet form .textarea textarea {
@@ -408,13 +418,13 @@ nav .signup-link:hover {
     font-weight: 500;
     border-radius: 6px;
     cursor: pointer;
-    background: #15bb4d;
-    border: 2px solid #50C878;
+    background: #49dcb1;
+    border: 2px solid #49dcb1;
     transition: all 0.3s ease;
 }
 
 .donet form .button-area button:hover {
-    color: #50C878;
+    color: #49dcb1;
     background: none;
 }
 
@@ -429,7 +439,7 @@ nav .signup-link:hover {
     display: flex;
     border-radius: 10px;
     background-color: rgb(235, 235, 235);
-    border: 2px solid #50C878;
+    border: 2px solid #49dcb1;
     margin: 0px 5px;
     padding: 20px;
     width: 400px;
@@ -448,7 +458,7 @@ nav .signup-link:hover {
 
 .contact .row i {
     font-size: 50px;
-    color: #50C878;
+    color: #49dcb1;
 }
 
 .contact .info .head {
@@ -479,7 +489,7 @@ nav .signup-link:hover {
 .contact form .textarea textarea {
     height: 100%;
     width: 100%;
-    border: 1px solid #50C878;
+    border: 1px solid #49dcb1;
     border-radius: 6px;
     outline: none;
     padding: 0 15px;
@@ -490,7 +500,7 @@ nav .signup-link:hover {
 
 .contact form .field input:focus,
 .contact form .textarea textarea:focus {
-    border: 3px solid #50C878;
+    border: 3px solid #49dcb1;
 }
 
 .contact form .textarea textarea {
@@ -516,19 +526,19 @@ nav .signup-link:hover {
     border-radius: 6px;
     cursor: pointer;
     flex-wrap: nowrap;
-    background: #15bb4d;
-    border: 2px solid #50C878;
+    background: #49dcb1;
+    border: 2px solid #49dcb1;
     transition: all 0.3s ease;
 }
 
 .contact form .button-area button:hover {
-    color: #50C878;
+    color: #49dcb1;
     background: none;
 }
 
 /* Footer */
 footer {
-    background: #26ac53;
+    background: #49dcb1;
     padding: 15px 23px;
     color: #fff;
     text-align: center;

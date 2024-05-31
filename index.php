@@ -1,3 +1,18 @@
+
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "paw-foundation";
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +27,6 @@
     <!-- link for icon  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 </head>
-
 <body>
 
     <!-- Sidebar for Signup Form -->
@@ -34,9 +48,10 @@
                 </div>
             </form>
 
-            <form id="signup-form" class="signup-form" style="display: none;">
+            <form action="connect.php" method="post" id="signup-form" class="signup-form" style="display: none; padding:40px" >
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 <h2>Signup to Paw Foundation</h2>
-                <div class="field">
+                <div class="field" style="margin-top: 20;">
                     <label for="first_name">First Name:</label>
                     <input type="text" id="first_name" name="first_name" required>
                 </div>
@@ -62,7 +77,7 @@
                 </div>
                 <div class="field">
                     <label for="email_signup">Email:</label>
-                    <input type="email" id="email_signup" name="email" required>
+                    <input type="email" id="email_signup" name="email_signup" required>
                 </div>
                 <div class="button-area">
                     <input type="submit" value="Signup">
@@ -117,7 +132,7 @@
                     </div>
                 </div>
             </div>
-            <hr style="margin: 50px 0px;">
+            <hr style="margin: 50px 0;">
             <div class="contact-content">
                 <div class="column right">
                     <div class="about-us-logo img-2">
@@ -134,7 +149,7 @@
                 </div>
             </div>
             <div id="m-v"></div>
-            <hr style="margin: 50px 0px;">
+            <hr style="margin: 50px 0;">
             <div class="contact-content2">
                 <div class="column left">
                     <div class="title2" style="text-align: center; color: #111;">Our Mission</div>

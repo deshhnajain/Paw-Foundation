@@ -2,8 +2,8 @@
 
 /* CSS RESET */
 * {
-    margin: 0px 0px;
-    padding: 0px 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
@@ -39,14 +39,14 @@ section {
     color: #111;
     font-size: 30px;
     font-weight: 1000;
-    margin: 30px 0px;
+    margin: 30px 0;
     font-family: 'Ubuntu', sans-serif;
 }
 
 /* Navbar */
 nav {
     position: sticky;
-    top: 0px;
+    top: 0;
     display: flex;
     height: 80px;
     width: 100%;
@@ -122,13 +122,13 @@ nav .signup-link:hover {
 
 /* Sidebar */
 .sidebar {
-    height: 90%;
+    height: 80%;
     width: 0;
     position: fixed;
     z-index: 1;
-    top: 5%;
+    top: 80px; /* Adjusted top to ensure it starts below the navigation bar */
     left: 0;
-    background-color: #111;
+    background-color: #49dcb1;
     overflow-x: hidden;
     transition: 0.5s;
     display: flex;
@@ -141,6 +141,7 @@ nav .signup-link:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #49dcb1;
 }
 
 .sidebar .signup-form {
@@ -148,7 +149,6 @@ nav .signup-link:hover {
     max-width: 400px;
     background-color: #222;
     padding: 20px;
-    padding-top: 60px; /* Added padding to move the form down */
     border-radius: 8px;
     color: white;
     text-align: left;
@@ -318,7 +318,7 @@ nav .signup-link:hover {
 
 /* Donate */
 .donet {
-    background: url("../IMG/m4.jpeg") no-repeat center;
+    background: url("../IMG/sl3.jpeg") no-repeat center;
     height: 100vh;
     background-size: cover;
     background-attachment: fixed;
@@ -440,7 +440,7 @@ nav .signup-link:hover {
     border-radius: 10px;
     background-color: rgb(235, 235, 235);
     border: 2px solid #49dcb1;
-    margin: 0px 5px;
+    margin: 0 5px;
     padding: 20px;
     width: 400px;
     text-align: center;

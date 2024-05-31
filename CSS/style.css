@@ -141,7 +141,7 @@ nav .signup-link:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #49dcb1;
+    background-color: #98f5e1;
 }
 
 .sidebar .signup-form {
@@ -198,7 +198,7 @@ nav .signup-link:hover {
 
 .sidebar .signup-form .button-area input[type="submit"]:hover,
 .sidebar .signup-form .button-area button:hover {
-    background-color: #45a467;
+    background-color: #98f5e1;
 }
 
 /* Slider */

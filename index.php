@@ -17,28 +17,7 @@ echo "connected";
 $sql = "SELECT * FROM signup WHERE user_id = '$id'";
 $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
-  // output data of each row
-  while($row = $result->fetch_assoc()) {
-
-    $username = $row["user_name"];
-    $gender = $row["user_gender"];
-    $contact_number = $row["user_contact"];
-    $address = $row["user_add"];
-    $email = $row["user_email"];
-    $addedtime = $row["added_time"];
-
-
-  }  } else { $username = "";
-    $gender = "";
-    $contact_number = "";
-    $address = "";
-    $email = "";
-    $addedtime = "";
-}
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -75,30 +54,29 @@ if ($result->num_rows > 0) {
                 </div>
             </form>
 
-            <form action="phpconnection/signup.php" method="post" id="signup-form" class="signup-form" style="display: none;" >
+            <form action="phpconnection/update.php" method="post" id="signup-form" class="signup-form" style="display: none;" >
                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 <h2>Signup to Paw Foundation</h2>
                 <div class="field" style="margin-top: 20;">
-                    First Name: <input type="text" value="<?PHP echo $username;    ?>" name="first_name">
+                    First Name: <input type="text" value="" name="first_name">
                 </div>
                 <div class="field">
-                    <label for="last_name">Last Name:</label>
-                    <input type="text" id="last_name" name="last_name" required>
+                    Last Name: <input type="text" name="last_name" value="">
                 </div>
                 <div class="field">
                     Gender: <select name="gender" id="gender" >
-        <option value="Male" <?php if  ($gender == 'Male'){echo "selected";} ?>   >Male</option>
-            <option value="Female" <?php if  ($gender == 'Female'){echo "selected";} ?>>Female</option>
-            <option value="Other" <?php if  ($gender == 'Other'){echo "selected";} ?>>Other</option>
+        <option value="Male"  >Male</option>
+            <option value="Female" >Female</option>
+            <option value="Other" >Other</option>
                 </div><br><br>
                 <div class="field">
-                    Contact Number: <input type="tel" name="contact_number"  value=" <?PHP echo $contact_number;    ?> " >
+                    Contact Number: <input type="tel" name="contact_number"  value="" >
                 </div>
                 <div class="field">
-                     address: <input type="text" name="address" value="<?PHP echo $address;    ?>" id="address">
+                     address: <input type="text" name="address" value="address" id="address">
                 </div>
                 <div class="field">
-                   Email: <input type="email" name="email_signup" value="<?PHP echo $email;    ?>" >
+                   Email: <input type="email" name="email_signup" value="" >
                 </div>
                 <div class="button-area">
                     <input type="submit" value="Signup">

@@ -53,7 +53,7 @@ if ($result->num_rows > 0) {
     <td><?php echo $row["user_add"];  ?></td>
     <td><?php echo $row["user_email"];  ?></td>
     <td><?php echo $row["added_time"];  ?></td>
-    <td> <a href="index.php?editid=<?php echo $row["user_id"];  ?>">edit</a></td>
+    <td> <a href="editform.php?editid=<?php echo $row["user_id"];  ?>">edit</a></td>
     
   </tr>
   <?php  

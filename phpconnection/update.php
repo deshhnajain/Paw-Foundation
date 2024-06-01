@@ -20,7 +20,7 @@ $addedtime = date('Y-m-d H:i:s');
 
 
 
-$sql = "UPDATE signup SET user_name = '$first_name' , user_gender='$gender', user_cont='$contact_number', user_add='$address', user_email='$email', added_time='$addedtime' WHERE user_id='$userid' ";
+$sql = "UPDATE signup SET user_name = '$first_name' , user_gender='$gender', user_contact='$contact_number', user_add='$address', user_email='$email', added_time='$addedtime' WHERE user_id='$userid' ";
 
  
 

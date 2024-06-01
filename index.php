@@ -1,3 +1,43 @@
+<?php
+
+$id = $_GET['editid'];
+$servername = "localhost";
+
+$username = "root";
+$password = "";
+$database = "pawfoundation";
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+
+}
+echo "connected";
+$sql = "SELECT * FROM signup WHERE user_id = '$id'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+
+    $username = $row["user_name"];
+    $gender = $row["user_gender"];
+    $contact_number = $row["user_contact"];
+    $address = $row["user_add"];
+    $email = $row["user_email"];
+    $addedtime = $row["added_time"];
+
+
+  }  } else { $username = "";
+    $gender = "";
+    $contact_number = "";
+    $address = "";
+    $email = "";
+    $addedtime = "";
+}
+
+?>
 
 
 <!DOCTYPE html>
@@ -39,32 +79,26 @@
                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 <h2>Signup to Paw Foundation</h2>
                 <div class="field" style="margin-top: 20;">
-                    <label for="first_name">First Name:</label>
-                    <input type="text" id="first_name" name="first_name" required>
+                    First Name: <input type="text" value="<?PHP echo $username;    ?>" name="first_name">
                 </div>
                 <div class="field">
                     <label for="last_name">Last Name:</label>
                     <input type="text" id="last_name" name="last_name" required>
                 </div>
                 <div class="field">
-                    <label for="gender">Gender:</label>
-                    <select name="gender" id="gender" required>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                        <option value="Other">Other</option>
-                    </select>
+                    Gender: <select name="gender" id="gender" >
+        <option value="Male" <?php if  ($gender == 'Male'){echo "selected";} ?>   >Male</option>
+            <option value="Female" <?php if  ($gender == 'Female'){echo "selected";} ?>>Female</option>
+            <option value="Other" <?php if  ($gender == 'Other'){echo "selected";} ?>>Other</option>
+                </div><br><br>
+                <div class="field">
+                    Contact Number: <input type="tel" name="contact_number"  value=" <?PHP echo $contact_number;    ?> " >
                 </div>
                 <div class="field">
-                    <label for="contact_number">Contact Number:</label>
-                    <input type="tel" id="contact_number" name="contact_number" pattern="[0-9]{10}" required>
+                     address: <input type="text" name="address" value="<?PHP echo $address;    ?>" id="address">
                 </div>
                 <div class="field">
-                    <label for="address">Address:</label>
-                    <input type="text" id="address" name="address" required>
-                </div>
-                <div class="field">
-                    <label for="email_signup">Email:</label>
-                    <input type="email" id="email_signup" name="email_signup" required>
+                   Email: <input type="email" name="email_signup" value="<?PHP echo $email;    ?>" >
                 </div>
                 <div class="button-area">
                     <input type="submit" value="Signup">

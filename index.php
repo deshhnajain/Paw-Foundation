@@ -189,36 +189,29 @@ $result = $conn->query($sql);
                 <h2 class="title">Donate Us</h2>
             </div>
             <div class="form-container">
-                <form action="#">
-                    <div class="fields">
-                        <div class="field">
-                            <input type="text" placeholder="First Name" required>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <input type="email" placeholder="Email" required>
-                    </div>
-                    <div class="field">
-                        <input type="number" placeholder="Phone Number" required>
-                    </div>
-                    <div class="field">
-                        <input type="number" placeholder="Enter Amount" required>
-                    </div>
-                    <div class="fields">
-                        <div class="field">
-                            <input type="text" placeholder="Bank Name" required>
-                        </div>
-                        <div class="field">
-                            <input type="number" placeholder="ISFC Number" required>
-                        </div>
-                    </div>
-                    <div class="field textarea">
-                        <textarea cols="30" rows="10" placeholder="Why you donate?" required></textarea>
-                    </div>
-                    <div class="button-area">
-                        <button type="submit">Donate NGO</button>
-                    </div>
-                </form>
+                <form action="phpconnection/donate.php" method="post">
+    <div class="fields">
+        <div class="field">
+            <input type="text" name="name" placeholder="Name" required>
+        </div>
+    </div>
+    <div class="field">
+        <input type="email" name="email" placeholder="Email" required>
+    </div>
+    <div class="field">
+        <input type="number" name="contact" placeholder="Phone Number" required>
+    </div>
+    <div class="field">
+        <input type="number" name="amount" placeholder="Enter Amount" required>
+    </div>
+    <div class="field textarea">
+        <textarea name="why_donate" cols="30" rows="10" placeholder="Why you donate?" required></textarea>
+    </div>
+    <div class="button-area">
+        <button type="submit">Donate NGO</button>
+    </div>
+</form>
+
             </div>
         </div>
     </section>

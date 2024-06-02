@@ -12,6 +12,12 @@ if ($conn->connect_error) {
 }
 $sql = "SELECT * FROM signup";
 $result = $conn->query($sql);
+
+
+// Query for donate table
+$sql_donate = "SELECT * FROM donation";
+$result_donate = $conn->query($sql_donate);
+
 ?>
 <html>
 <head><title>table</title></head>
@@ -62,5 +68,48 @@ $i++;
 }}
   ?>
 </table >
+<br><br>
+<table>
+  <table>
+  <tr>
+     <th>sno.</th>
+    <th>name</th>
+    <th>email</th>
+    <th>contact</th>
+    <th>amount</th>
+    <th>reason</th>
+      <th>addedtime</th>
+  </tr>
+
+ <?php  
+ $i=1;
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+
+?>
+
+  <tr>
+    <td><?php echo $i;  ?></td>
+    <td><?php echo $row["name"];  ?></td>
+    <td><?php echo $row["email"];  ?></td>
+    <td><?php echo $row["contact"];  ?></td>
+    <td><?php echo $row["amount"];  ?></td>
+    <td><?php echo $row["reason"];  ?></td>
+    <td><?php echo $row["added_time"];  ?></td>
+  </tr>
+  <?php  
+$i++;
+
+}}
+  ?>
+  
+
+
+
+
+
+</table>
 </body>
 </html>

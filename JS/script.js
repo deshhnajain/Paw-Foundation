@@ -1,3 +1,5 @@
+// script.js
+
 // Automatic Slideshow
 var headerss = 0;
 carousel();
@@ -46,26 +48,21 @@ function showSlides() {
 // Signup form sidebar functionality
 document.getElementById("sidebarButton").onclick = function (event) {
     var sidebar = document.getElementById("sidebar");
-    var button = document.getElementById("sidebarButton");
     if (sidebar.style.width === "50%") {
         sidebar.style.width = "0";
-        button.innerHTML = "Signup/login";
     } else {
         sidebar.style.width = "50%";
-        button.innerHTML = "&times;";
     }
     event.stopPropagation(); // Prevent the event from bubbling up to the document
 };
 
 document.addEventListener("click", function (event) {
     var sidebar = document.getElementById("sidebar");
-    var button = document.getElementById("sidebarButton");
     var sidebarButton = document.getElementById("sidebarButton");
 
     // Check if the sidebar is open and the click is outside the sidebar and the button
     if (sidebar.style.width === "50%" && !sidebar.contains(event.target) && !sidebarButton.contains(event.target)) {
         sidebar.style.width = "0";
-        button.innerHTML = "Signup/login";
     }
 });
 

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/animate.aos.css" />
 </head>
 <body>
 
@@ -69,7 +69,6 @@
     <!-- Navigation Bar -->
     <nav>
         <div id="navbar" class="logo">
-            <button id="sidebarButton" class="openbtn" style="background-color: #49dcb1; color: white;">Signup/login</button>
             <img src="IMG/logo.png" alt="logo">
             <div class="logotex">Paw Foundation</div>
         </div>
@@ -79,6 +78,7 @@
             <li><a href="#m-v">Mission & Vision</a></li>
             <li><a href="#donet">Donate</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a id="sidebarButton" href="javascript:void(0)">Signup/login</a></li>
         </ul>
     </nav>
 
@@ -105,7 +105,7 @@
                 </div>
                 <div class="column right" data-aos="fade-right">
                     <div class="about-us-logo">
-                        <img src="" alt="">
+                        <img src="IMG/m3.jpg" alt="About Us Image"> <!-- Add your image here -->
                     </div>
                 </div>
             </div>
@@ -137,7 +137,7 @@
                         <img class="card" src="img/m4.jpeg" alt="">
                         <img class="card" src="img/m5.jpeg" alt="">
                     </div>
-                    <p data-aos="fade-up">Our mission is to rescue, rehabilitate, and rehome dogs in need...</p>
+                    <p data-aos="fade-up">Our mission is to rescue abandoned, abused, and neglected dogs, providing them with medical care, rehabilitation, and the opportunity for a new beginning through adoption.</p>
                     <div class="button-area">
                         <button type="submit" data-aos="zoom-in">Read more</button>
                     </div>
@@ -151,7 +151,9 @@
                         <img class="card-2" src="img/v4.jpg" alt="">
                         <img class="card-2" src="img/v5.jpg" alt="">
                     </div>
-                    <p data-aos="fade-up">Our vision is a world where every dog is loved...</p>
+                    <p data-aos="fade-up">Our vision is to create a world where every dog is treated with compassion, respect, and love, and where every dog has a safe and loving home.
+
+</p>
                     <div class="button-area">
                         <button type="submit" data-aos="zoom-in">Read more</button>
                     </div>
@@ -260,7 +262,11 @@
     <script src="JS/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            duration: 1000, // Duration of the animation in milliseconds
+            once: true, // Whether animation should happen only once - while scrolling down
+            mirror: false, // Whether elements should animate out while scrolling past them
+        });
     </script>
 </body>
 </html>

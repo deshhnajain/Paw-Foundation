@@ -53,8 +53,7 @@ document.getElementById("sidebarButton").onclick = function (event) {
     } else {
         sidebar.style.width = "50%";
     }
-    event.stopPropagation(); // Prevent the event from bubbling up to the document
-};
+    event.stopPropagation();
 
 document.addEventListener("click", function (event) {
     var sidebar = document.getElementById("sidebar");

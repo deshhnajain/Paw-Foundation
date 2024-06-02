@@ -16,53 +16,59 @@
     <!-- Sidebar for Signup Form -->
     <div id="sidebar" class="sidebar">
         <div class="form-container">
-            <form id="login-form" class="signup-form">
-                <h2>Login to Paw Foundation</h2>
-                <div class="field">
-                    <input type="email" name="email" placeholder="Email" required>
-                </div>
-                <div class="field">
-                    <input type="password" name="password" placeholder="Password" required>
-                </div>
-                <div class="button-area">
-                    <input type="submit" value="Login">
-                </div>
-                <div class="button-area">
-                    <button type="button" id="showSignupForm">Signup</button>
-                </div>
-            </form>
+            <form id="login-form" class="signup-form" action="phpconnection/login.php" method="post">
+    <h2>Login to Paw Foundation</h2>
+    <div class="field">
+        <input type="email" name="email" placeholder="Email" required>
+    </div>
+    <div class="field">
+        <input type="password" name="password" placeholder="Password" required>
+    </div>
+    <div class="button-area">
+        <input type="submit" value="Login">
+    </div>
+    <div class="button-area">
+        <button type="button" id="showSignupForm">Signup</button>
+    </div>
+</form>
 
-            <form action="phpconnection/update.php" method="post" id="signup-form" class="signup-form" style="display: none;">
-                <h2>Signup to Paw Foundation</h2>
-                <div class="field">
-                    First Name: <input type="text" value="" name="first_name">
-                </div>
-                <div class="field">
-                    Last Name: <input type="text" name="last_name" value="">
-                </div>
-                <div class="field">
-                    Gender: <select name="gender" id="gender">
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
-                <div class="field">
-                    Contact Number: <input type="tel" name="contact_number" value="">
-                </div>
-                <div class="field">
-                    Address: <input type="text" name="address" value="address" id="address">
-                </div>
-                <div class="field">
-                    Email: <input type="email" name="email_signup" value="">
-                </div>
-                <div class="button-area">
-                    <input type="submit" value="Signup">
-                </div>
-                <div class="button-area">
-                    <button type="button" id="showLoginForm">Login</button>
-                </div>
-            </form>
+
+            <form action="phpconnection/signup.php" method="post" id="signup-form" class="signup-form" style="display: none;">
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h2>Signup to Paw Foundation</h2>
+    <div class="field">
+        First Name: <input type="text" value="" name="first_name">
+    </div>
+    <div class="field">
+        Last Name: <input type="text" name="last_name" value="">
+    </div>
+    <div class="field">
+        Gender: <select name="gender" id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+    <div class="field">
+        Contact Number: <input type="tel" name="contact_number" value="">
+    </div>
+    <div class="field">
+        Address: <input type="text" name="address" value="address" id="address">
+    </div>
+    <div class="field">
+        Email: <input type="email" name="email_signup" value="">
+    </div>
+    <div class="field">
+        Password: <input type="password" name="password_signup" value="">
+    </div>
+    <div class="button-area">
+        <input type="submit" value="Signup">
+    </div>
+    <div class="button-area">
+        <button type="button" id="showLoginForm">Login</button>
+    </div>
+</form>
+
         </div>
     </div>
 
@@ -255,7 +261,7 @@
 
     <!-- Footer Section -->
     <footer>
-        <span class="far fa-copyright"></span> <span style="color: #111;">Paw Foundation</span>&nbsp;|&nbsp;&nbsp;<span>2021 All rights reserved.</span>
+        <span class="far fa-copyright"></span> <span style="color: #111;">Paw Foundation</span>&nbsp;|&nbsp;&nbsp;<span>2024 All rights reserved.</span>
     </footer>
 
     <!-- link js file -->

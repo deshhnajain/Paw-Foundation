@@ -127,7 +127,7 @@ nav .signup-link:hover {
     width: 0;
     position: fixed;
     z-index: 1;
-    top: 80px; /* Adjusted top to ensure it starts below the navigation bar */
+    top: 80px; 
     left: 0;
     background-color: #49dcb1;
     overflow-x: hidden;
@@ -544,9 +544,7 @@ footer {
     color: #fff;
     text-align: center;
 }
-/* Add this to your existing style.css file */
 
-/* Hover effect for Signup/login button */
 #sidebarButton {
     transition: background-color 0.3s, color 0.3s;
 }

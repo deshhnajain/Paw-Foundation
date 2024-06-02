@@ -34,6 +34,7 @@ table, th, td {
 </style>
 
 <body>
+  <p>REGISTERED USERS</p>
 <table>
   <tr>
     <th>sno.</th>
@@ -42,6 +43,7 @@ table, th, td {
     <th>contact_number</th>
     <th>address</th>
     <th>email</th>
+    <th>password</th>
     <th>addedtime</th>
     <th>edit</th>
   </tr>
@@ -60,6 +62,7 @@ if ($result_signup->num_rows > 0) {
     <td><?php echo $row["user_contact"]; ?></td>
     <td><?php echo $row["user_add"]; ?></td>
     <td><?php echo $row["user_email"]; ?></td>
+    <td><?php echo $row["user_pass"]; ?></td>
     <td><?php echo $row["added_time"]; ?></td>
     <td><a href="editform.php?editid=<?php echo $row["user_id"]; ?>">edit</a></td>
   </tr>
@@ -73,7 +76,7 @@ if ($result_signup->num_rows > 0) {
 </table>
 
 <br><br>
-
+<P>DONATE USERS</P>
 <table>
   <tr>
     <th>sno.</th>
@@ -110,6 +113,7 @@ if ($result_donate->num_rows > 0) {
 
 </table>
 <br>
+<P>MESSAGES BY USERS</P>
 <table>
   <tr>
     <th>sno.</th>

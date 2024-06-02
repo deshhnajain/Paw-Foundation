@@ -1,23 +1,4 @@
-<?php
 
-$id = $_GET['editid'];
-$servername = "localhost";
-
-$username = "root";
-$password = "";
-$database = "pawfoundation";
-// Create connection
-$conn = new mysqli($servername, $username, $password, $database);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-
-}
-echo "connected";
-$sql = "SELECT * FROM signup WHERE user_id = '$id'";
-$result = $conn->query($sql);
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -212,6 +193,8 @@ $result = $conn->query($sql);
     </div>
 </form>
 
+
+
             </div>
         </div>
     </section>
@@ -253,18 +236,18 @@ $result = $conn->query($sql);
             </div>
             <div class="column">
                 <div class="title2">Message Paw Foundation</div>
-                <form action="#">
+                <form action="phpconnection/message.php" method="post">
                     <div class="field">
-                        <input type="text" placeholder="Name" required>
+                        <input type="text" placeholder="Name" name="name" required>
                     </div>
                     <div class="field">
-                        <input type="email" placeholder="Email" required>
+                        <input type="email" placeholder="Email" name="email" required>
                     </div>
                     <div class="field">
-                        <input type="number" placeholder="Phone number" required>
+                        <input type="number" placeholder="Phone number" name="contact" required>
                     </div>
                     <div class="field textarea">
-                        <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
+                        <textarea cols="30" rows="10" placeholder="Message.." name="message" required></textarea>
                     </div>
                     <div class="button-area">
                         <button type="submit">Send message</button>

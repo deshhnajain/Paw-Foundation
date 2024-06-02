@@ -123,11 +123,11 @@ nav .signup-link:hover {
 
 /* Sidebar */
 .sidebar {
-    height: 80%;
+    height: 100%;
     width: 0;
     position: fixed;
     z-index: 1;
-    top: 80px; 
+    top: 0; 
     left: 0;
     background-color: #49dcb1;
     overflow-x: hidden;
@@ -135,6 +135,7 @@ nav .signup-link:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 80px; /* Aligns the sidebar to start below the navbar */
 }
 
 .sidebar .form-container {
@@ -262,7 +263,7 @@ nav .signup-link:hover {
 .about-us .about-us-logo img {
     height: 490px;
     border: 10px solid #49dcb1;
-    border-radius: 1000PX;
+    border-radius: 1000px;
     margin: auto;
 }
 
@@ -290,7 +291,7 @@ nav .signup-link:hover {
 .about-us .contact-content2 .v-m-img img {
     height: 300px;
     border: 1px solid #111;
-    border-radius: 10PX;
+    border-radius: 10px;
     margin: auto;
 }
 
@@ -463,6 +464,8 @@ nav .signup-link:hover {
 }
 
 .contact .info .head {
+   
+
     font-weight: 500;
 }
 

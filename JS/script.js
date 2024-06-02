@@ -15,7 +15,7 @@ function carousel() {
         headerss = 1;
     }
     x[headerss - 1].style.display = "block";
-    setTimeout(carousel, 2000); // Adjust the timing as needed
+    setTimeout(carousel, 2000); 
 }
 
 // Automatic Slideshow for About >> Mission and Vision
@@ -39,7 +39,7 @@ function showSlides() {
     }
     cards1[cardIndex - 1].style.display = "block";
     cards2[cardIndex - 1].style.display = "block";
-    setTimeout(showSlides, 2000); // Adjust the timing as needed
+    setTimeout(showSlides, 2000); 
 }
 
 // Signup form sidebar functionality

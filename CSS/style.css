@@ -135,7 +135,7 @@ nav .signup-link:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 80px; /* Aligns the sidebar to start below the navbar */
+    padding-top: 80px; 
 }
 
 .sidebar .form-container {
@@ -553,7 +553,7 @@ footer {
 }
 
 #sidebarButton:hover {
-    background-color: #36b598; /* Darker shade of green */
+    background-color: #36b598; 
     color: #fff;
 }
 

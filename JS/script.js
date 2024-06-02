@@ -49,7 +49,7 @@ document.getElementById("sidebarButton").onclick = function (event) {
     var button = document.getElementById("sidebarButton");
     if (sidebar.style.width === "50%") {
         sidebar.style.width = "0";
-        button.innerHTML = "Signup";
+        button.innerHTML = "Signup/login";
     } else {
         sidebar.style.width = "50%";
         button.innerHTML = "&times;";
@@ -65,7 +65,7 @@ document.addEventListener("click", function (event) {
     // Check if the sidebar is open and the click is outside the sidebar and the button
     if (sidebar.style.width === "50%" && !sidebar.contains(event.target) && !sidebarButton.contains(event.target)) {
         sidebar.style.width = "0";
-        button.innerHTML = "Signup";
+        button.innerHTML = "Signup/login";
     }
 });
 

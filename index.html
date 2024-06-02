@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,12 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paw Foundation</title>
-    <!-- link for tab logo -->
     <link rel="icon" href="IMG/logo.png" type="image/x-icon">
-    <!-- link css file  -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- link for icon  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="css/aos.css" />
 </head>
 <body>
 
@@ -35,29 +32,29 @@
                 </div>
             </form>
 
-            <form action="phpconnection/update.php" method="post" id="signup-form" class="signup-form" style="display: none;" >
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <form action="phpconnection/update.php" method="post" id="signup-form" class="signup-form" style="display: none;">
                 <h2>Signup to Paw Foundation</h2>
-                <div class="field" style="margin-top: 20;">
+                <div class="field">
                     First Name: <input type="text" value="" name="first_name">
                 </div>
                 <div class="field">
                     Last Name: <input type="text" name="last_name" value="">
                 </div>
                 <div class="field">
-                    Gender: <select name="gender" id="gender" >
-        <option value="Male"  >Male</option>
-            <option value="Female" >Female</option>
-            <option value="Other" >Other</option>
-                </div><br><br>
-                <div class="field">
-                    Contact Number: <input type="tel" name="contact_number"  value="" >
+                    Gender: <select name="gender" id="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
                 </div>
                 <div class="field">
-                     address: <input type="text" name="address" value="address" id="address">
+                    Contact Number: <input type="tel" name="contact_number" value="">
                 </div>
                 <div class="field">
-                   Email: <input type="email" name="email_signup" value="" >
+                    Address: <input type="text" name="address" value="address" id="address">
+                </div>
+                <div class="field">
+                    Email: <input type="email" name="email_signup" value="">
                 </div>
                 <div class="button-area">
                     <input type="submit" value="Signup">
@@ -72,7 +69,7 @@
     <!-- Navigation Bar -->
     <nav>
         <div id="navbar" class="logo">
-            <button id="sidebarButton" class="openbtn">Signup</button>
+            <button id="sidebarButton" class="openbtn" style="background-color: #49dcb1; color: white;">Signup/login</button>
             <img src="IMG/logo.png" alt="logo">
             <div class="logotex">Paw Foundation</div>
         </div>
@@ -86,27 +83,27 @@
     </nav>
 
     <!-- Slider -->
-    <div id="slider" class="slider">
+    <div id="slider" class="slider" data-aos="zoom-in">
         <div>
-            <img class="images" src="IMG/sl1.jpg">
-            <img class="images" src="IMG/sl2.jpg">
-            <img class="images" src="IMG/sl3.jpeg">
+            <img class="images" src="IMG/sl1.jpg" data-aos="fade-left">
+            <img class="images" src="IMG/sl2.jpg" data-aos="fade-right">
+            <img class="images" src="IMG/sl3.jpeg" data-aos="zoom-in">
         </div>
     </div>
 
     <!-- About Us Section -->
-    <section class="about-us" id="about-us">
+    <section class="about-us" id="about-us" data-aos="fade-up">
         <div class="max-width">
-            <h2 class="title">About us</h2>
+            <h2 class="title" data-aos="fade-right">About us</h2>
             <div class="contact-content">
-                <div class="column left">
+                <div class="column left" data-aos="fade-left">
                     <div class="title2">About Paw Foundation</div>
-                    <p>Paw Foundation is a dedicated non-profit organization committed to the welfare and protection of dogs. Established with a mission to create a safer and more compassionate world for our furry friends, we focus on rescuing, rehabilitating, and rehoming dogs in need.<br><br> At Paw Foundation, we believe every dog deserves a chance at a happy, healthy life. Our adoption services carefully match dogs with loving families, ensuring a perfect fit for both the pet and the owner. </p>
+                    <p data-aos="fade-up">Paw Foundation is a dedicated non-profit organization committed to the welfare and protection of dogs. Established with a mission to create a safer and more compassionate world for our furry friends, we focus on rescuing, rehabilitating, and rehoming dogs in need.<br><br> At Paw Foundation, we believe every dog deserves a chance at a happy, healthy life. Our adoption services carefully match dogs with loving families, ensuring a perfect fit for both the pet and the owner.</p>
                     <div class="button-area">
-                        <button type="submit">Read more</button>
+                        <button type="submit" data-aos="zoom-in">Read more</button>
                     </div>
                 </div>
-                <div class="column right">
+                <div class="column right" data-aos="fade-right">
                     <div class="about-us-logo">
                         <img src="" alt="">
                     </div>
@@ -114,24 +111,24 @@
             </div>
             <hr style="margin: 50px 0;">
             <div class="contact-content">
-                <div class="column right">
+                <div class="column right" data-aos="fade-left">
                     <div class="about-us-logo img-2">
                         <img src="img/aboutus.png" alt="">
                     </div>
                 </div>
-                <div class="column left">
-                    <div class="title2">Why Paw Foundation ?</div>
-                    <p>Choosing Paw Foundation means supporting a dedicated organization We go beyond the basics of rescue by focusing on long-term solutions, such as community education and advocacy for responsible pet ownership, which address the root causes of dog abandonment and mistreatment.<br><br>By choosing Paw Foundation, you are joining a community that is passionate about making a tangible difference in the lives of dogs. We believe in transparency and accountability, regularly updating our supporters on the progress and impact of our initiatives.</p>
+                <div class="column left" data-aos="fade-right">
+                    <div class="title2">Why Paw Foundation?</div>
+                    <p data-aos="fade-up">Choosing Paw Foundation means supporting a dedicated organization We go beyond the basics of rescue by focusing on long-term solutions, such as community education and advocacy for responsible pet ownership, which address the root causes of dog abandonment and mistreatment.<br><br>By choosing Paw Foundation, you are joining a community that is passionate about making a tangible difference in the lives of dogs. We believe in transparency and accountability, regularly updating our supporters on the progress and impact of our initiatives.</p>
                     <div class="button-area">
-                        <button type="submit">Read more</button>
-                        <button type="submit"><a href="#donet" style="text-decoration: none; color:black">Donate</a></button>
+                        <button type="submit" data-aos="zoom-in">Read more</button>
+                        <button type="submit"><a href="#donet" style="text-decoration: none; color:black" data-aos="zoom-in">Donate</a></button>
                     </div>
                 </div>
             </div>
             <div id="m-v"></div>
             <hr style="margin: 50px 0;">
             <div class="contact-content2">
-                <div class="column left">
+                <div class="column left" data-aos="fade-left">
                     <div class="title2" style="text-align: center; color: #111;">Our Mission</div>
                     <div class="v-m-img">
                         <img class="card" src="img/m1.png" alt="">
@@ -140,12 +137,12 @@
                         <img class="card" src="img/m4.jpeg" alt="">
                         <img class="card" src="img/m5.jpeg" alt="">
                     </div>
-                    <p>Our mission is to rescue, rehabilitate, and rehome dogs in need...</p>
+                    <p data-aos="fade-up">Our mission is to rescue, rehabilitate, and rehome dogs in need...</p>
                     <div class="button-area">
-                        <button type="submit">Read more</button>
+                        <button type="submit" data-aos="zoom-in">Read more</button>
                     </div>
                 </div>
-                <div class="column left">
+                <div class="column left" data-aos="fade-right">
                     <div class="title2" style="text-align: center; color: #111;">Our Vision</div>
                     <div class="v-m-img">
                         <img class="card-2" src="img/v1.jpeg" alt="">
@@ -154,9 +151,9 @@
                         <img class="card-2" src="img/v4.jpg" alt="">
                         <img class="card-2" src="img/v5.jpg" alt="">
                     </div>
-                    <p>Our vision is a world where every dog is loved...</p>
+                    <p data-aos="fade-up">Our vision is a world where every dog is loved...</p>
                     <div class="button-area">
-                        <button type="submit">Read more</button>
+                        <button type="submit" data-aos="zoom-in">Read more</button>
                     </div>
                 </div>
             </div>
@@ -164,46 +161,43 @@
     </section>
 
     <!-- Donate Section -->
-    <section class="donet" id="donet">
+    <section class="donet" id="donet" data-aos="fade-up">
         <div class="max-width">
-            <div class="title-container">
+            <div class="title-container" data-aos="fade-right">
                 <h2 class="title">Donate Us</h2>
             </div>
             <div class="form-container">
                 <form action="phpconnection/donate.php" method="post">
-    <div class="fields">
-        <div class="field">
-            <input type="text" name="name" placeholder="Name" required>
-        </div>
-    </div>
-    <div class="field">
-        <input type="email" name="email" placeholder="Email" required>
-    </div>
-    <div class="field">
-        <input type="number" name="contact" placeholder="Phone Number" required>
-    </div>
-    <div class="field">
-        <input type="number" name="amount" placeholder="Enter Amount" required>
-    </div>
-    <div class="field textarea">
-        <textarea name="why_donate" cols="30" rows="10" placeholder="Why you donate?" required></textarea>
-    </div>
-    <div class="button-area">
-        <button type="submit">Donate NGO</button>
-    </div>
-</form>
-
-
-
+                    <div class="fields" data-aos="fade-left">
+                        <div class="field">
+                            <input type="text" name="name" placeholder="Name" required>
+                        </div>
+                    </div>
+                    <div class="field" data-aos="fade-right">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="field" data-aos="fade-left">
+                        <input type="number" name="contact" placeholder="Phone Number" required>
+                    </div>
+                    <div class="field" data-aos="fade-right">
+                        <input type="number" name="amount" placeholder="Enter Amount" required>
+                    </div>
+                    <div class="field textarea" data-aos="fade-left">
+                        <textarea name="why_donate" cols="30" rows="10" placeholder="Why you donate?" required></textarea>
+                    </div>
+                    <div class="button-area" data-aos="zoom-in">
+                        <button type="submit">Donate NGO</button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <section class="contact" id="contact" data-aos="fade-up">
         <div class="max-width">
-            <h2 class="title">Contact us</h2>
-            <div class="column">
+            <h2 class="title" data-aos="fade-right">Contact us</h2>
+            <div class="column" data-aos="fade-left">
                 <div class="icons">
                     <div class="row">
                         <div class="box">
@@ -234,22 +228,22 @@
                     </div>
                 </div>
             </div>
-            <div class="column">
+            <div class="column" data-aos="fade-right">
                 <div class="title2">Message Paw Foundation</div>
                 <form action="phpconnection/message.php" method="post">
-                    <div class="field">
+                    <div class="field" data-aos="fade-left">
                         <input type="text" placeholder="Name" name="name" required>
                     </div>
-                    <div class="field">
+                    <div class="field" data-aos="fade-right">
                         <input type="email" placeholder="Email" name="email" required>
                     </div>
-                    <div class="field">
+                    <div class="field" data-aos="fade-left">
                         <input type="number" placeholder="Phone number" name="contact" required>
                     </div>
-                    <div class="field textarea">
+                    <div class="field textarea" data-aos="fade-right">
                         <textarea cols="30" rows="10" placeholder="Message.." name="message" required></textarea>
                     </div>
-                    <div class="button-area">
+                    <div class="button-area" data-aos="zoom-in">
                         <button type="submit">Send message</button>
                     </div>
                 </form>
@@ -264,5 +258,9 @@
 
     <!-- link js file -->
     <script src="JS/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

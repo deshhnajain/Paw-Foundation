@@ -1,7 +1,7 @@
 /* animate.aos.css */
 [data-aos] {
     transition-property: opacity, transform;
-    transition-duration: 4s;
+    transition-duration: 2s;
 }
 
 [data-aos="fade-up"] {
@@ -14,7 +14,6 @@
     transform: translateY(0);
 }
 
-/* Add styles for other animations if needed */
 [data-aos="fade-right"] {
     opacity: 0;
     transform: translateX(-50px);

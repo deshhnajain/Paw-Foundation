@@ -1,3 +1,18 @@
+<?php 
+    $path = $_SERVER['DOCUMENT_ROOT']."Paw-Foundation";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "pawfoundation";
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -91,9 +106,19 @@
     <!-- Slider -->
     <div id="slider" class="slider" data-aos="zoom-in">
         <div>
-            <img class="images" src="IMG/sl1.jpg" data-aos="fade-left">
-            <img class="images" src="IMG/sl2.jpg" data-aos="fade-right">
-            <img class="images" src="IMG/sl3.jpeg" data-aos="zoom-in">
+            <?php 
+                
+                $sql = "SELECT * FROM registration";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc())
+{ ?>
+
+
+           
+            <img class="images" src="registrations/<?php echo $row['image'];?>" data-aos="fade-left"> <?php }} ?>
+            
         </div>
     </div>
 
@@ -212,7 +237,7 @@
                             <i class="fas fa-phone"></i>
                             <div class="info">
                                 <div class="head">Call on</div>
-                                <div class="sub-title">+91 63894 56210</div>
+                                <div class="sub-title">+91 9868793029</div>
                             </div>
                         </div>
                     </div>

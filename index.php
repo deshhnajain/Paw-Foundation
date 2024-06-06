@@ -108,7 +108,7 @@ if ($conn->connect_error) {
         <div>
             <?php 
                 
-                $sql = "SELECT * FROM registration";
+                $sql = "SELECT * FROM banner";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -117,7 +117,7 @@ if ($result->num_rows > 0) {
 
 
            
-            <img class="images" src="registrations/<?php echo $row['image'];?>" data-aos="fade-left"> <?php }} ?>
+            <img class="images" src="changeimgs/<?php echo $row['image'];?>" data-aos="fade-left"> <?php }} ?>
             
         </div>
     </div>

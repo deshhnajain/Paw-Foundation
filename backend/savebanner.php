@@ -21,13 +21,13 @@ if($photo<>'')
 				$image1=explode('.',$photo);
 				$bannerimage=end($image1);
 				$bannerfile=time().'.'.$bannerimage;
-				move_uploaded_file($_FILES["photo1"]["tmp_name"],$_SERVER['DOCUMENT_ROOT'].'/Paw-Foundation/registrations/' . $bannerfile);
+				move_uploaded_file($_FILES["photo1"]["tmp_name"],$_SERVER['DOCUMENT_ROOT'].'/Paw-Foundation/changeimgs/' . $bannerfile);
 			}else
 			{
 			$bannerfile='';
 
 }
-$sql = "INSERT INTO registration(image , name ,added_time)
+$sql = "INSERT INTO banner(image , name ,added_time)
 VALUES ('$bannerfile' , '$name' , '$addedtime')";
 
 

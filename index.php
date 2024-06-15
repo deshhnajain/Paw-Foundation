@@ -1,15 +1,16 @@
 <?php 
-    $path = $_SERVER['DOCUMENT_ROOT']."Paw-Foundation";
+$path = $_SERVER['DOCUMENT_ROOT']."Paw-Foundation";
 $servername = "localhost";
 $username = "root";
 $password = "";
 $database = "pawfoundation";
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
+
 // Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
-
 }
 ?>
 
@@ -32,57 +33,56 @@ if ($conn->connect_error) {
     <div id="sidebar" class="sidebar">
         <div class="form-container">
             <form id="login-form" class="signup-form" action="phpconnection/login.php" method="post">
-    <h2>Login to Paw Foundation</h2>
-    <div class="field">
-        <input type="email" name="email" placeholder="Email" required>
-    </div>
-    <div class="field">
-        <input type="password" name="password" placeholder="Password" required>
-    </div>
-    <div class="button-area">
-        <input type="submit" value="Login">
-    </div>
-    <div class="button-area">
-        <button type="button" id="showSignupForm">Signup</button>
-    </div>
-</form>
-
+                <h2>Login to Paw Foundation</h2>
+                <div class="field">
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="field">
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="button-area">
+                    <input type="submit" value="Login">
+                </div>
+                <div class="button-area">
+                    <button type="button" id="showSignupForm">Signup</button>
+                </div>
+            </form>
 
             <form action="phpconnection/signup.php" method="post" id="signup-form" class="signup-form" style="display: none;">
                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <h2>Signup to Paw Foundation</h2>
-    <div class="field">
-        First Name: <input type="text" value="" name="first_name">
-    </div>
-    <div class="field">
-        Last Name: <input type="text" name="last_name" value="">
-    </div>
-    <div class="field">
-        Gender: <select name="gender" id="gender">
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="Other">Other</option>
-        </select>
-    </div>
-    <div class="field">
-        Contact Number: <input type="tel" name="contact_number" value="">
-    </div>
-    <div class="field">
-        Address: <input type="text" name="address" value="address" id="address">
-    </div>
-    <div class="field">
-        Email: <input type="email" name="email_signup" value="">
-    </div>
-    <div class="field">
-        Password: <input type="password" name="password_signup" value="">
-    </div>
-    <div class="button-area">
-        <input type="submit" value="Signup">
-    </div>
-    <div class="button-area">
-        <button type="button" id="showLoginForm">Login</button>
-    </div>
-</form>
+                <h2>Signup to Paw Foundation</h2>
+                <div class="field">
+                    First Name: <input type="text" value="" name="first_name">
+                </div>
+                <div class="field">
+                    Last Name: <input type="text" name="last_name" value="">
+                </div>
+                <div class="field">
+                    Gender: <select name="gender" id="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="field">
+                    Contact Number: <input type="tel" name="contact_number" value="">
+                </div>
+                <div class="field">
+                    Address: <input type="text" name="address" value="address" id="address">
+                </div>
+                <div class="field">
+                    Email: <input type="email" name="email_signup" value="">
+                </div>
+                <div class="field">
+                    Password: <input type="password" name="password_signup" value="">
+                </div>
+                <div class="button-area">
+                    <input type="submit" value="Signup">
+                </div>
+                <div class="button-area">
+                    <button type="button" id="showLoginForm">Login</button>
+                </div>
+            </form>
 
         </div>
     </div>
@@ -107,18 +107,15 @@ if ($conn->connect_error) {
     <div id="slider" class="slider" data-aos="zoom-in">
         <div>
             <?php 
-                
-                $sql = "SELECT * FROM banner";
-$result = $conn->query($sql);
+            $sql = "SELECT * FROM banner";
+            $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc())
-{ ?>
-
-
-           
-            <img class="images" src="changeimgs/<?php echo $row['image'];?>" data-aos="fade-left"> <?php }} ?>
-            
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) { 
+                    echo '<img class="images" src="changeimgs/' . $row['image'] . '" data-aos="fade-left">';
+                } 
+            } 
+            ?>
         </div>
     </div>
 
@@ -162,11 +159,16 @@ if ($result->num_rows > 0) {
                 <div class="column left" data-aos="fade-left">
                     <div class="title2" style="text-align: center; color: #111;">Our Mission</div>
                     <div class="v-m-img">
-                        <img class="card" src="img/m1.png" alt="">
-                        <img class="card" src="img/m2.jpg" alt="">
-                        <img class="card" src="img/m3.jpg" alt="">
-                        <img class="card" src="img/m4.jpeg" alt="">
-                        <img class="card" src="img/m5.jpeg" alt="">
+                        <?php 
+                        $sql = "SELECT * FROM mission";
+                        $result = $conn->query($sql);
+
+                        if ($result->num_rows > 0) {
+                            while($row = $result->fetch_assoc()) { 
+                                echo '<img class="card" src="changeimgs/' . $row['image'] . '" alt="Mission Image">';
+                            } 
+                        } 
+                        ?>
                     </div>
                     <p data-aos="fade-up">Our mission is to rescue abandoned, abused, and neglected dogs, providing them with medical care, rehabilitation, and the opportunity for a new beginning through adoption.</p>
                     <div class="button-area">
@@ -174,17 +176,21 @@ if ($result->num_rows > 0) {
                     </div>
                 </div>
                 <div class="column left" data-aos="fade-right">
-                    <div class="title2" style="text-align: center; color: #111;">Our Vision</div>
-                    <div class="v-m-img">
-                        <img class="card-2" src="img/v1.jpeg" alt="">
-                        <img class="card-2" src="img/v2.jpeg" alt="">
-                        <img class="card-2" src="img/v3.jpeg" alt="">
-                        <img class="card-2" src="img/v4.jpg" alt="">
-                        <img class="card-2" src="img/v5.jpg" alt="">
-                    </div>
-                    <p data-aos="fade-up">Our vision is to create a world where every dog is treated with compassion, respect, and love, and where every dog has a safe and loving home.
+                   <div class="title2" style="text-align: center; color: #111;">Our Vision</div>
+<div class="v-m-img">
+    <?php 
+    $sql = "SELECT * FROM vision";
+    $result = $conn->query($sql);
 
-</p>
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) { 
+            echo '<img class="images" src="changeimgs/' . $row['image'] . '" data-aos="fade-left">';
+        } 
+    } 
+    ?>
+</div>
+
+                    <p data-aos="fade-up">Our vision is to create a world where every dog is treated with compassion, respect, and love, and where every dog has a safe and loving home.</p>
                     <div class="button-area">
                         <button type="submit" data-aos="zoom-in">Read more</button>
                     </div>

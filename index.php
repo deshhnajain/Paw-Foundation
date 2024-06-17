@@ -39,7 +39,6 @@ $vision_content = get_content($conn, 'vision');
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <link rel="stylesheet" href="css/animate.aos.css" />
 </head>
 <body>
 
@@ -63,32 +62,31 @@ $vision_content = get_content($conn, 'vision');
             </form>
 
             <form action="phpconnection/signup.php" method="post" id="signup-form" class="signup-form" style="display: none;">
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 <h2>Signup to Paw Foundation</h2>
                 <div class="field">
-                    First Name: <input type="text" value="" name="first_name">
+                    <input type="text" name="first_name" placeholder="First Name" required>
                 </div>
                 <div class="field">
-                    Last Name: <input type="text" name="last_name" value="">
+                    <input type="text" name="last_name" placeholder="Last Name" required>
                 </div>
                 <div class="field">
-                    Gender: <select name="gender" id="gender">
+                    <select name="gender" id="gender" required>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                         <option value="Other">Other</option>
                     </select>
                 </div>
                 <div class="field">
-                    Contact Number: <input type="tel" name="contact_number" value="">
+                    <input type="tel" name="contact_number" placeholder="Contact Number" required>
                 </div>
                 <div class="field">
-                    Address: <input type="text" name="address" value="address" id="address">
+                    <input type="text" name="address" placeholder="Address" required>
                 </div>
                 <div class="field">
-                    Email: <input type="email" name="email_signup" value="">
+                    <input type="email" name="email_signup" placeholder="Email" required>
                 </div>
                 <div class="field">
-                    Password: <input type="password" name="password_signup" value="">
+                    <input type="password" name="password_signup" placeholder="Password" required>
                 </div>
                 <div class="button-area">
                     <input type="submit" value="Signup">
@@ -97,15 +95,13 @@ $vision_content = get_content($conn, 'vision');
                     <button type="button" id="showLoginForm">Login</button>
                 </div>
             </form>
-
         </div>
     </div>
 
-
     <!-- Navigation Bar -->
     <nav>
-        <div id="navbar" class="logo">
-            <img src="IMG/logo.png" alt="logo">
+        <div class="logo">
+            <img src="IMG/logo.png" alt="Paw Foundation Logo">
             <div class="logotex">Paw Foundation</div>
         </div>
         <ul>
@@ -114,36 +110,34 @@ $vision_content = get_content($conn, 'vision');
             <li><a href="#m-v">Mission & Vision</a></li>
             <li><a href="#donet">Donate</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a id="sidebarButton" href="javascript:void(0)">Signup/login</a></li>
+            <li><a id="sidebarButton" href="javascript:void(0)">Signup/Login</a></li>
         </ul>
     </nav>
 
     <!-- Slider -->
     <div id="slider" class="slider" data-aos="zoom-in">
-        <div>
-            <?php 
-            $sql = "SELECT * FROM banner";
-            $result = $conn->query($sql);
+        <?php 
+        $sql = "SELECT * FROM banner";
+        $result = $conn->query($sql);
 
-            if ($result->num_rows > 0) {
-                while($row = $result->fetch_assoc()) { 
-                    echo '<img class="images" src="changeimgs/' . $row['image'] . '" data-aos="fade-left">';
-                } 
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) { 
+                echo '<img class="images" src="changeimgs/' . $row['image'] . '" data-aos="fade-left">';
             } 
-            ?>
-        </div>
+        } 
+        ?>
     </div>
 
     <!-- About Us Section -->
     <section class="about-us" id="about-us" data-aos="fade-up">
         <div class="max-width">
-            <h2 class="title" data-aos="fade-right">About us</h2>
+            <h2 class="title" data-aos="fade-right">About Us</h2>
             <div class="contact-content">
                 <div class="column left" data-aos="fade-left">
                     <div class="title2">About Paw Foundation</div>
                     <p data-aos="fade-up"><?php echo $about_us_content; ?></p>
                     <div class="button-area">
-                        <button type="submit" data-aos="zoom-in">Read more</button>
+                        <button data-aos="zoom-in">Read more</button>
                     </div>
                 </div>
                 <div class="column right" data-aos="fade-right">
@@ -152,36 +146,39 @@ $vision_content = get_content($conn, 'vision');
                     </div>
                 </div>
             </div>
-            <hr style="margin: 50px 0;">
+            <hr>
             <div class="contact-content">
                 <div class="column right" data-aos="fade-left">
                     <div class="about-us-logo img-2">
-                        <img src="img/aboutus.png" alt="">
+                        <img src="IMG/aboutus.png" alt="Why Paw Foundation">
                     </div>
                 </div>
                 <div class="column left" data-aos="fade-right">
                     <div class="title2">Why Paw Foundation?</div>
                     <p data-aos="fade-up"><?php echo $why_paw_foundation_content; ?></p>
                     <div class="button-area">
-                        <button type="submit" data-aos="zoom-in">Read more</button>
-                        <button type="submit"><a href="#donet" style="text-decoration: none; color:black" data-aos="zoom-in">Donate</a></button>
+                        <button data-aos="zoom-in">Read more</button>
+                        <button><a href="#donet" style="text-decoration: none; color:black" data-aos="zoom-in">Donate</a></button>
                     </div>
                 </div>
             </div>
         </div>
-    
+    </section>
+
     <div id="m-v"></div>
-            <hr style="margin: 50px 0;">
+    <hr>
+    <section class="about-us" id="mission-vision" data-aos="fade-up">
+        <div class="max-width">
             <div class="contact-content2">
-    <div class="column left" data-aos="fade-left">
-                    <div class="title2" style="text-align: center; color: #111;">Our Mission</div>
+                <div class="column left" data-aos="fade-left">
+                    <div class="title2" style="text-align: center;">Our Mission</div>
                     <div class="v-m-img">
                         <?php 
                         $sql = "SELECT * FROM mission";
                         $result = $conn->query($sql);
 
                         if ($result->num_rows > 0) {
-                            while($row = $result->fetch_assoc()) { 
+                            while ($row = $result->fetch_assoc()) { 
                                 echo '<img class="card" src="changeimgs/' . $row['image'] . '" alt="Mission Image">';
                             } 
                         } 
@@ -189,34 +186,33 @@ $vision_content = get_content($conn, 'vision');
                     </div>
                     <p><?php echo $mission_content; ?></p>
                     <div class="button-area">
-                        <button type="submit" data-aos="zoom-in">Read more</button>
+                        <button data-aos="zoom-in">Read more</button>
                     </div>
                 </div>
+                <div class="column left" data-aos="fade-right">
+                    <div class="title2" style="text-align: center;">Our Vision</div>
+                    <div class="v-m-img">
+                        <?php 
+                        $sql = "SELECT * FROM vision";
+                        $result = $conn->query($sql);
 
-    <div class="column left" data-aos="fade-right">
-                   <div class="title2" style="text-align: center; color: #111;">Our Vision</div>
-<div class="v-m-img">
-    <?php 
-    $sql = "SELECT * FROM vision";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) { 
-            echo '<img class="images" src="changeimgs/' . $row['image'] . '" data-aos="fade-left">';
-        } 
-    } 
-    ?>
-</div>
-
-                    <<p><?php echo $vision_content; ?></p>
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) { 
+                                echo '<img class="card-2" src="changeimgs/' . $row['image'] . '" alt="Vision Image">';
+                            } 
+                        } 
+                        ?>
+                    </div>
+                    <p><?php echo $vision_content; ?></p>
                     <div class="button-area">
-                        <button type="submit" data-aos="zoom-in">Read more</button>
+                        <button data-aos="zoom-in">Read more</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-     <!-- Donate Section -->
+
+    <!-- Donate Section -->
     <section class="donet" id="donet" data-aos="fade-up">
         <div class="max-width">
             <div class="title-container" data-aos="fade-right">
@@ -304,13 +300,15 @@ $vision_content = get_content($conn, 'vision');
                     </div>
                 </form>
             </div>
+        </div>
+    </section>
 
     <!-- Footer Section -->
     <footer>
-        <span class="far fa-copyright"></span> <span style="color: #111;">Paw Foundation</span>&nbsp;|&nbsp;&nbsp;<span>2024 All rights reserved.</span>
+        <span class="far fa-copyright"></span> <span>Paw Foundation</span> | <span>2024 All rights reserved.</span>
     </footer>
 
-    <!-- link js file -->
+    <!-- Link js file -->
     <script src="JS/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>

@@ -1,4 +1,3 @@
-/* animate.aos.css */
 [data-aos] {
     transition-property: opacity, transform;
     transition-duration: 2s;

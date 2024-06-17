@@ -27,5 +27,18 @@ if (!empty($_POST['section_key']) && !empty($_POST['content'])) {
         // Update existing section
         $sql = "UPDATE website_content SET content = '$content', added_time = '$addedtime' WHERE section_key = '$section_key'";
     } else {
-        // Insert new section
-        $sql = "INSERT INTO website_content (section_key, content, added_time) VALUES ('$section_key
+       // Insert new section
+        $sql = "INSERT INTO website_content (section_key, content, added_time) VALUES ('$section_key', '$content', '$addedtime')";
+    }
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Record updated/inserted successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+} else {
+    echo "Section key and content are required.";
+}
+
+$conn->close();
+?>

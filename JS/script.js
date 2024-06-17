@@ -7,14 +7,24 @@ carousel();
 function carousel() {
     var i;
     var x = document.getElementsByClassName("images");
+
+    // Hide all elements with class "images"
     for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
     }
+
+    // Increment headerss to show the next slide
     headerss++;
+
+    // Reset headerss if it exceeds the number of slides
     if (headerss > x.length) {
-        headerss = 1;
+        headerss = 0;
     }
+
+    // Display the current slide
     x[headerss - 1].style.display = "block";
+
+    // Set a timeout to call carousel function again after 2000 milliseconds (2 seconds)
     setTimeout(carousel, 2000); 
 }
 
@@ -72,3 +82,22 @@ document.getElementById("showLoginForm").onclick = function () {
     document.getElementById("signup-form").style.display = "none";
     document.getElementById("login-form").style.display = "block";
 };
+
+// New Slider Functionality (added below)
+
+document.addEventListener("DOMContentLoaded", function() {
+    let slides = document.querySelectorAll('#slider .slide');
+    let currentSlide = 0;
+    let slideInterval = setInterval(nextSlide, 3000);
+
+    function nextSlide() {
+        slides[currentSlide].style.display = 'none';
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].style.display = 'block';
+    }
+
+    // Initially set the first slide to be visible
+    if (slides.length > 0) {
+        slides[0].style.display = 'block';
+    }
+});

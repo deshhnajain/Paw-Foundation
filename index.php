@@ -1,5 +1,4 @@
-<?php 
-$path = $_SERVER['DOCUMENT_ROOT']."Paw-Foundation";
+<?php
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -10,8 +9,23 @@ $conn = new mysqli($servername, $username, $password, $database);
 
 // Check connection
 if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+    die("Connection failed: " . $conn->connect_error);
 }
+
+function get_content($conn, $section_key) {
+    $sql = "SELECT content FROM website_content WHERE section_key = '$section_key' ORDER BY added_time DESC LIMIT 1";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        return $result->fetch_assoc()['content'];
+    } else {
+        return "";
+    }
+}
+
+$about_us_content = get_content($conn, 'about_us');
+$why_paw_foundation_content = get_content($conn, 'why_paw_foundation');
+$mission_content = get_content($conn, 'mission');
+$vision_content = get_content($conn, 'vision');
 ?>
 
 <!DOCTYPE html>
@@ -87,6 +101,7 @@ if ($conn->connect_error) {
         </div>
     </div>
 
+
     <!-- Navigation Bar -->
     <nav>
         <div id="navbar" class="logo">
@@ -126,7 +141,7 @@ if ($conn->connect_error) {
             <div class="contact-content">
                 <div class="column left" data-aos="fade-left">
                     <div class="title2">About Paw Foundation</div>
-                    <p data-aos="fade-up">Paw Foundation is a dedicated non-profit organization committed to the welfare and protection of dogs. Established with a mission to create a safer and more compassionate world for our furry friends, we focus on rescuing, rehabilitating, and rehoming dogs in need.<br><br> At Paw Foundation, we believe every dog deserves a chance at a happy, healthy life. Our adoption services carefully match dogs with loving families, ensuring a perfect fit for both the pet and the owner.</p>
+                    <p data-aos="fade-up"><?php echo $about_us_content; ?></p>
                     <div class="button-area">
                         <button type="submit" data-aos="zoom-in">Read more</button>
                     </div>
@@ -146,17 +161,19 @@ if ($conn->connect_error) {
                 </div>
                 <div class="column left" data-aos="fade-right">
                     <div class="title2">Why Paw Foundation?</div>
-                    <p data-aos="fade-up">Choosing Paw Foundation means supporting a dedicated organization We go beyond the basics of rescue by focusing on long-term solutions, such as community education and advocacy for responsible pet ownership, which address the root causes of dog abandonment and mistreatment.<br><br>By choosing Paw Foundation, you are joining a community that is passionate about making a tangible difference in the lives of dogs. We believe in transparency and accountability, regularly updating our supporters on the progress and impact of our initiatives.</p>
+                    <p data-aos="fade-up"><?php echo $why_paw_foundation_content; ?></p>
                     <div class="button-area">
                         <button type="submit" data-aos="zoom-in">Read more</button>
                         <button type="submit"><a href="#donet" style="text-decoration: none; color:black" data-aos="zoom-in">Donate</a></button>
                     </div>
                 </div>
             </div>
-            <div id="m-v"></div>
+        </div>
+    
+    <div id="m-v"></div>
             <hr style="margin: 50px 0;">
             <div class="contact-content2">
-                <div class="column left" data-aos="fade-left">
+    <div class="column left" data-aos="fade-left">
                     <div class="title2" style="text-align: center; color: #111;">Our Mission</div>
                     <div class="v-m-img">
                         <?php 
@@ -170,12 +187,13 @@ if ($conn->connect_error) {
                         } 
                         ?>
                     </div>
-                    <p data-aos="fade-up">Our mission is to rescue abandoned, abused, and neglected dogs, providing them with medical care, rehabilitation, and the opportunity for a new beginning through adoption.</p>
+                    <p><?php echo $mission_content; ?></p>
                     <div class="button-area">
                         <button type="submit" data-aos="zoom-in">Read more</button>
                     </div>
                 </div>
-                <div class="column left" data-aos="fade-right">
+
+    <div class="column left" data-aos="fade-right">
                    <div class="title2" style="text-align: center; color: #111;">Our Vision</div>
 <div class="v-m-img">
     <?php 
@@ -190,7 +208,7 @@ if ($conn->connect_error) {
     ?>
 </div>
 
-                    <p data-aos="fade-up">Our vision is to create a world where every dog is treated with compassion, respect, and love, and where every dog has a safe and loving home.</p>
+                    <<p><?php echo $vision_content; ?></p>
                     <div class="button-area">
                         <button type="submit" data-aos="zoom-in">Read more</button>
                     </div>
@@ -198,8 +216,7 @@ if ($conn->connect_error) {
             </div>
         </div>
     </section>
-
-    <!-- Donate Section -->
+     <!-- Donate Section -->
     <section class="donet" id="donet" data-aos="fade-up">
         <div class="max-width">
             <div class="title-container" data-aos="fade-right">
@@ -287,8 +304,6 @@ if ($conn->connect_error) {
                     </div>
                 </form>
             </div>
-        </div>
-    </section>
 
     <!-- Footer Section -->
     <footer>
@@ -307,3 +322,4 @@ if ($conn->connect_error) {
     </script>
 </body>
 </html>
+<?php $conn->close(); ?>

@@ -76,7 +76,7 @@ if ($result_signup->num_rows > 0) {
 </table>
 
 <br><br>
-<P>DONATE USERS</P>
+<P>DONATION BY USERS</P>
 <table>
   <tr>
     <th>sno.</th>

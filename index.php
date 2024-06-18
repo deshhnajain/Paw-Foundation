@@ -152,9 +152,16 @@ $email= get_personal_info($conn, 'email');
             <div class="contact-content">
                 <div class="column left" data-aos="fade-left">
                     <div class="title2">About Paw Foundation</div>
-                    <p data-aos="fade-up"><?php echo $about_us_content; ?></p>
-                    <div class="button-area">
-                        <button data-aos="zoom-in">Read more</button>
+                    <div class="content-container">
+                        <p class="preview-text" data-aos="fade-up">
+                            <?php echo substr($about_us_content, 0, 150); ?>...
+                        </p>
+                        <p class="full-text" data-aos="fade-up" style="display: none;">
+                            <?php echo $about_us_content; ?>
+                        </p>
+                        <div class="button-area">
+                            <button class="read-more-btn" data-aos="zoom-in">Read More</button>
+                        </div>
                     </div>
                 </div>
                 <div class="column right" data-aos="fade-right">
@@ -172,18 +179,24 @@ $email= get_personal_info($conn, 'email');
                 </div>
                 <div class="column left" data-aos="fade-right">
                     <div class="title2">Why Paw Foundation?</div>
-                    <p data-aos="fade-up"><?php echo $why_paw_foundation_content; ?></p>
-                    <div class="button-area">
-                        <button data-aos="zoom-in">Read more</button>
-                        <button><a href="#donet" style="text-decoration: none; color:black" data-aos="zoom-in">Donate</a></button>
+                    <div class="content-container">
+                        <p class="preview-text" data-aos="fade-up">
+                            <?php echo substr($why_paw_foundation_content, 0, 150); ?>...
+                        </p>
+                        <p class="full-text" data-aos="fade-up" style="display: none;">
+                            <?php echo $why_paw_foundation_content; ?>
+                        </p>
+                        <div class="button-area">
+                            <button class="read-more-btn" data-aos="zoom-in">Read More</button>
+                            <button><a href="#donet" style="text-decoration: none; color:black" data-aos="zoom-in">Donate</a></button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div id="m-v"></div>
-    <hr>
+    <!-- Mission and Vision Section -->
     <section class="about-us" id="mission-vision" data-aos="fade-up">
         <div class="max-width">
             <div class="contact-content2">
@@ -201,9 +214,16 @@ $email= get_personal_info($conn, 'email');
                         } 
                         ?>
                     </div>
-                    <p><?php echo $mission_content; ?></p>
-                    <div class="button-area">
-                        <button data-aos="zoom-in">Read more</button>
+                    <div class="content-container">
+                        <p class="preview-text">
+                            <?php echo substr($mission_content, 0, 150); ?>...
+                        </p>
+                        <p class="full-text" style="display: none;">
+                            <?php echo $mission_content; ?>
+                        </p>
+                        <div class="button-area">
+                            <button class="read-more-btn" data-aos="zoom-in">Read More</button>
+                        </div>
                     </div>
                 </div>
                 <div class="column left" data-aos="fade-right">
@@ -220,9 +240,16 @@ $email= get_personal_info($conn, 'email');
                         } 
                         ?>
                     </div>
-                    <p><?php echo $vision_content; ?></p>
-                    <div class="button-area">
-                        <button data-aos="zoom-in">Read more</button>
+                    <div class="content-container">
+                        <p class="preview-text">
+                            <?php echo substr($vision_content, 0, 150); ?>...
+                        </p>
+                        <p class="full-text" style="display: none;">
+                            <?php echo $vision_content; ?>
+                        </p>
+                        <div class="button-area">
+                            <button class="read-more-btn" data-aos="zoom-in">Read More</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -262,7 +289,6 @@ $email= get_personal_info($conn, 'email');
         </div>
     </section>
 
-   
     <!-- Contact Section -->
     <section class="contact" id="contact" data-aos="fade-up">
         <div class="max-width">
@@ -298,8 +324,6 @@ $email= get_personal_info($conn, 'email');
                     </div>
                 </div>
             </div>
-
-        
 
             <div class="column" data-aos="fade-right">
                 <div class="title2">Message Paw Foundation</div>

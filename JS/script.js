@@ -84,3 +84,24 @@ document.addEventListener("DOMContentLoaded", function() {
         slides[0].style.display = 'block';
     }
 });
+document.addEventListener("DOMContentLoaded", function() {
+    // Read More functionality
+    document.querySelectorAll(".read-more-btn").forEach(function(button) {
+        button.addEventListener("click", function() {
+            const parent = this.closest('.content-container');
+            const fullText = parent.querySelector('.full-text');
+            const previewText = parent.querySelector('.preview-text');
+            
+            if (fullText.style.display === "none" || fullText.style.display === "") {
+                fullText.style.display = "block";
+                previewText.style.display = "none";
+                this.textContent = "Read Less";
+            } else {
+                fullText.style.display = "none";
+                previewText.style.display = "block";
+                this.textContent = "Read More";
+            }
+        });
+    });
+});
+

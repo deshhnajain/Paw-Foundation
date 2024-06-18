@@ -26,6 +26,23 @@ $about_us_content = get_content($conn, 'about_us');
 $why_paw_foundation_content = get_content($conn, 'why_paw_foundation');
 $mission_content = get_content($conn, 'mission');
 $vision_content = get_content($conn, 'vision');
+
+
+
+function get_personal_info($conn, $section_key) {
+    $sql = "SELECT content FROM personal_info WHERE section_key = '$section_key' LIMIT 1";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        return $result->fetch_assoc()['content'];
+    } else {
+        return "";
+    }
+}
+
+$contact = get_personal_info($conn, 'contact');
+$address = get_personal_info($conn, 'address');
+$email= get_personal_info($conn, 'email');
+
 ?>
 
 <!DOCTYPE html>
@@ -245,6 +262,7 @@ $vision_content = get_content($conn, 'vision');
         </div>
     </section>
 
+   
     <!-- Contact Section -->
     <section class="contact" id="contact" data-aos="fade-up">
         <div class="max-width">
@@ -256,7 +274,7 @@ $vision_content = get_content($conn, 'vision');
                             <i class="fas fa-phone"></i>
                             <div class="info">
                                 <div class="head">Call on</div>
-                                <div class="sub-title">+91 9868793029</div>
+                                <div class="sub-title"><a href="tel:<?php echo $contact; ?>"><?php echo $contact; ?></a></div>
                             </div>
                         </div>
                     </div>
@@ -265,7 +283,7 @@ $vision_content = get_content($conn, 'vision');
                             <i class="fas fa-map-marker-alt"></i>
                             <div class="info">
                                 <div class="head">Address</div>
-                                <div class="sub-title">Delhi, India</div>
+                                <div class="sub-title"><a href="https://www.google.com/maps/search/?api=1&query=<?php echo urlencode($address); ?>" target="_blank"><?php echo $address; ?></a></div>
                             </div>
                         </div>
                     </div>
@@ -274,12 +292,15 @@ $vision_content = get_content($conn, 'vision');
                             <i class="fas fa-envelope"></i>
                             <div class="info">
                                 <div class="head">Email</div>
-                                <div class="sub-title">deshjain@gmail.com</div>
+                                <div class="sub-title"><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+        
+
             <div class="column" data-aos="fade-right">
                 <div class="title2">Message Paw Foundation</div>
                 <form action="phpconnection/message.php" method="post">

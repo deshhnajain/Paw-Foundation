@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Personal Information</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        function showInputField() {
+            var section = document.getElementById("section_key").value;
+            var contentLabel = document.getElementById("content-label");
+            var contentInput = document.getElementById("content");
+
+            switch (section) {
+                case "contact":
+                    contentLabel.textContent = "Enter Contact Number:";
+                    contentInput.type = "tel";
+                    contentInput.placeholder = "Contact Number";
+                    break;
+                case "address":
+                    contentLabel.textContent = "Enter Address:";
+                    contentInput.type = "text";
+                    contentInput.placeholder = "Address";
+                    break;
+                case "email":
+                    contentLabel.textContent = "Enter Email:";
+                    contentInput.type = "email";
+                    contentInput.placeholder = "Email";
+                    break;
+                default:
+                    contentLabel.textContent = "Content:";
+                    contentInput.type = "text";
+                    contentInput.placeholder = "";
+                    break;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="upload-container">
+        <h2>Upload Personal Information</h2>
+        <form action="savepersonal.php" method="post">
+            <label for="section_key">Select Section:</label>
+            <select id="section_key" name="section_key" onchange="showInputField()">
+                <option value="contact">Contact</option>
+                <option value="address">Address</option>
+                <option value="email">Email</option>
+            </select>
+
+            <label id="content-label" for="content">Content:</label>
+            <input id="content" name="content" type="text" required>
+
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+</html>

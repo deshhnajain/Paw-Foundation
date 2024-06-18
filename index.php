@@ -79,6 +79,7 @@ $email= get_personal_info($conn, 'email');
             </form>
 
             <form action="phpconnection/signup.php" method="post" id="signup-form" class="signup-form" style="display: none;">
+                <br><br><br><br><br><br><br>
                 <h2>Signup to Paw Foundation</h2>
                 <div class="field">
                     <input type="text" name="first_name" placeholder="First Name" required>
